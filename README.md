@@ -11,6 +11,7 @@ Personal GitHub Pages site for Andy Lau's game guides and browser tools.
 - `guides/goemon.html`
 - `guides/super-robot-w.html`
 - `guides/zelda-phantom-hourglass.html`
+- `guides/mecha-mg.html`
 
 ## Published pages
 
@@ -21,6 +22,7 @@ Personal GitHub Pages site for Andy Lau's game guides and browser tools.
 - <https://ylau674.github.io/guides/goemon.html>
 - <https://ylau674.github.io/guides/super-robot-w.html>
 - <https://ylau674.github.io/guides/zelda-phantom-hourglass.html>
+- <https://ylau674.github.io/guides/mecha-mg.html>
 - <https://ylau674.github.io/padi-scuba-dive-log/> - separate project repository
 
 The existing PADI Scuba Dive Log remains in its own repository and is linked from the home page:
