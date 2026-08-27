@@ -9,6 +9,17 @@ Personal GitHub Pages site for Andy Lau's game guides and browser tools.
 - `guides/jump-super-stars.html`
 - `guides/theme-park.html`
 - `guides/goemon.html`
+- `guides/super-robot-w.html`
+
+## Published pages
+
+- <https://ylau674.github.io/> - homepage and table of contents
+- <https://ylau674.github.io/guides/children-of-mana.html>
+- <https://ylau674.github.io/guides/jump-super-stars.html>
+- <https://ylau674.github.io/guides/theme-park.html>
+- <https://ylau674.github.io/guides/goemon.html>
+- <https://ylau674.github.io/guides/super-robot-w.html>
+- <https://ylau674.github.io/padi-scuba-dive-log/> - separate project repository
 
 The existing PADI Scuba Dive Log remains in its own repository and is linked from the home page:
 
@@ -16,15 +27,12 @@ The existing PADI Scuba Dive Log remains in its own repository and is linked fro
 
 ## Publish to GitHub Pages
 
-Create a public GitHub repository named exactly `ylau674.github.io`, then run:
+This repository is already configured to publish from the `main` branch. To update the site locally, run:
 
 ```bash
-git init
 git add .
-git commit -m "Create personal GitHub Pages site"
-git branch -M main
-git remote add origin https://github.com/ylau674/ylau674.github.io.git
-git push -u origin main
+git commit -m "Describe the change"
+git push origin main
 ```
 
 In GitHub, open **Settings -> Pages**, select **Deploy from a branch**, choose `main` and `/ (root)`, then save. The site will be available at:
