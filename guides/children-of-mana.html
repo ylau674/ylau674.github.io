@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A gameplay guide for Children of Mana covering controls, combat, story progression, gems, spirits, and side quests."><title>Children of Mana - Gameplay Guide</title><style>:root { color-scheme: light; --ink:#202b35; --muted:#61717c; --paper:#fffdf8; --cream:#f5efe3; --line:#d8d0c2; --teal:#176b6d; --teal-dark:#10494c; --gold:#c8872e; --shadow:0 18px 45px rgba(48,42,31,.11); }
+* { box-sizing:border-box; } html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:linear-gradient(135deg,#e8f0ec 0%,#f7f0e5 48%,#e9e2d7 100%); font-family:"Avenir Next","Hiragino Sans","Yu Gothic",sans-serif; line-height:1.75; }
+.page { display:grid; grid-template-columns:minmax(210px,260px) minmax(0,920px); gap:34px; max-width:1280px; margin:0 auto; padding:34px 26px 70px; }
+aside { position:sticky; top:24px; align-self:start; } .nav-card,main { background:rgba(255,253,248,.95); border:1px solid rgba(216,208,194,.9); box-shadow:var(--shadow); }
+.nav-card { padding:22px 20px; border-top:5px solid var(--gold); } .nav-card strong { display:block; color:var(--teal-dark); font-family:Georgia,serif; font-size:1.05rem; margin-bottom:10px; }
+nav a { display:block; color:var(--teal); font-size:.91rem; line-height:1.45; padding:6px 0; text-decoration:none; } nav a:hover { color:var(--gold); }
+main { min-width:0; padding:clamp(26px,5vw,62px); } h1,h2,h3,h4 { color:var(--teal-dark); font-family:Georgia,"Hiragino Mincho ProN",serif; line-height:1.2; scroll-margin-top:20px; }
+h1 { font-size:clamp(2.2rem,5vw,4rem); margin:0 0 12px; } h2 { border-top:2px solid var(--gold); font-size:2rem; margin:3.2em 0 1em; padding-top:18px; } h3 { font-size:1.45rem; margin:2em 0 .65em; } h4 { color:var(--teal); font-size:1.12rem; margin:1.8em 0 .5em; }
+p { margin:.8em 0; } main > p:first-of-type { color:var(--muted); font-size:1.08rem; } blockquote { background:#edf5f0; border-left:4px solid var(--teal); color:var(--teal-dark); margin:1em 0 2em; padding:12px 18px; }
+ul { padding-left:1.4em; } li::marker { color:var(--gold); } a { color:var(--teal); } code { background:var(--cream); border:1px solid var(--line); padding:.08em .3em; }
+.table-wrap { overflow-x:auto; margin:1.2em 0 2em; } table { border-collapse:collapse; min-width:620px; width:100%; font-size:.94rem; } th { background:var(--teal-dark); color:#fffdf8; text-align:left; } th,td { border:1px solid var(--line); padding:10px 12px; vertical-align:top; } tr:nth-child(even) td { background:#faf6ee; }
+@media (max-width:760px) { .page { display:block; padding:14px 10px 40px; } aside { position:static; margin-bottom:14px; } .nav-card { padding:15px 17px; } nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 16px; } main { padding:25px 18px 44px; } h2 { font-size:1.7rem; } }
+</style></head>
+<body><div class="page"><aside><div class="nav-card"><strong>Guide sections</strong><nav><a href="#controls-and-combat">Controls and combat</a><a href="#magic-and-spirits">Magic and spirits</a><a href="#main-story-walkthrough">Main story walkthrough</a><a href="#gem-reference">Gem reference</a><a href="#side-quests">Side quests</a></nav></div></aside><main><h1 id="children-of-mana-gameplay-guide">Children of Mana - Gameplay Guide</h1>
+<blockquote>A reorganised reference for controls, combat, story progression, gems, and optional quests.</blockquote>
+<h2 id="quick-navigation">Quick Navigation</h2>
+<ul><li><a href="#controls-and-combat">Controls and combat</a></li><li><a href="#magic-and-spirits">Magic and spirits</a></li><li><a href="#main-story-walkthrough">Main story walkthrough</a></li><li><a href="#gem-reference">Gem reference</a></li><li><a href="#side-quests">Side quests</a></li></ul>
+<h2 id="controls-and-combat">Controls and Combat</h2>
+<h3 id="menu">Menu</h3>
+<div class="table-wrap"><table>
+<tr><th>Japanese</th><th>Function</th></tr>
+<tr><td>セーブ</td><td>Save</td></tr>
+<tr><td>ステータス</td><td>View status and current side quests</td></tr>
+<tr><td>ジェム</td><td>Install and review gems</td></tr>
+<tr><td>アイテム</td><td>Use and review items</td></tr>
+<tr><td>マルチプレイ</td><td>Multiplayer</td></tr>
+<tr><td>村の外に出る / フラミーを呼ぶ / 村を戾る</td><td>In the village, the first two options appear once available. In dungeons, the menu option returns you to the village.</td></tr>
+</table></div>
+<h3 id="basic-controls">Basic controls</h3>
+<div class="table-wrap"><table>
+<tr><th>Button</th><th>Action</th></tr>
+<tr><td>A</td><td>Attack</td></tr>
+<tr><td>B</td><td>Summon spirit / cast magic</td></tr>
+<tr><td>X</td><td>Use sub-weapon</td></tr>
+<tr><td>Y</td><td>Use item</td></tr>
+<tr><td>L</td><td>Cycle items</td></tr>
+<tr><td>R</td><td>Cycle weapons</td></tr>
+<tr><td>SELECT</td><td>Activate FEVER when the gauge is full</td></tr>
+</table></div>
+<h3 id="weapons">Weapons</h3>
+<div class="table-wrap"><table>
+<tr><th>Weapon</th><th>Normal and charged attacks</th><th>FEVER charged attack</th></tr>
+<tr><td>劍</td><td>Press A repeatedly for a three-hit combo. Hold A to guard; this blocks flying weapons and some magic, and reduces other damage.</td><td>Forward thrust</td></tr>
+<tr><td>鏈條</td><td>Hold A to fire a non-damaging chain that pulls enemies, the player, and objects. Gems can add stealing effects.</td><td>Large-area spinning chain attack</td></tr>
+<tr><td>弓</td><td>Automatically aims when an enemy is in range. Hold A to play the harp; hitting enemies can inflict status effects.</td><td>Three-way shot that stuns</td></tr>
+<tr><td>錘子</td><td>Break large obstacles. Hold A to slam the ground, break spike terrain, or switch terrain objects.</td><td>Large spinning hammer attack with invulnerability, except on spikes</td></tr>
+</table></div>
+<h3 id="fever">FEVER</h3>
+<p>Attack enemies to fill the gauge at the lower right. When it is full, press SELECT to enter FEVER. Charged attacks become special attacks, and spirits can add different attack effects.</p>
+<h3 id="combat-notes">Combat notes</h3>
+<p><strong>劍的第三砍會把敵人打飛,如果此時該敵人砸到了其他敵人,那麼就會給另外的敵人造成傷害,鏈條攻擊直接將敵人打飛.原理同劍,錘子則為高爾夫球試的攻擊,一旦敵人撞到版邊也會造成傷害,但是如果敵人砸到自己身上則不會傷害但會有硬直.所以如果版面特別窄且敵人很多的時候,用錘子打高爾夫球別有一番風味.呵呵.值得一提的是這個道理我方也適用,例如出現在虛幻之地的羊,衝撞攻擊會導致我方撞牆受到連續傷害.</strong></p>
+<p><strong>　　連續傷害是有計算公式的.而不是隨機傷害值,第二次受傷害(撞牆,撞到其他敵人等等)傷害值為最後一次受攻擊值的一半左右,第三次為第二次的一半..........如此類推,最低傷害值為1.</strong></p>
+<p><strong>地圖攻略:</strong></p>
+<p><strong>下屏在沒有任何菜單的情況下會提示劇情下一步該做的事,而本次聖劍DS的迷宮攻破方法很是單調,無非就是找光之水滴(光のしずく)和傳送點,按A/X舉起光之水滴到傳送點那裡放下就進入下一層了.改變的只有出現的條件而已.分支任務也多是如此.每四層會有一次菜單進入的休息時間,此時可以存檔,更換裝備等等.所以後面的劇情攻略幾乎無任何難點,各位需要做的就是練習如何在群敵之中生存下來而已.同時一度突破過的迷宮再去則會以時空歪曲的形式重新開始以前發展過的劇情,和練級有點類似.</strong></p>
+<h2 id="magic-and-spirits">Magic and Spirits</h2>
+<p><strong>　　魔法需要借助精靈的幫助,每次出戰之前可以選擇好自己愛用的精靈一起前去戰鬥,通常是找在石碑面前的提斯去切換.根據劇情發展的不同,中途可能會換成店裡的人來,這要注意.B為魔法,需要一定詠唱時間,隨著輝石令精靈級別的提升,詠唱時間也會增加.召喚出來的精靈如果放置在地面一段時間它就會產生攻擊魔法,按B+方向可以調整它的位置,如果釋放出精靈後觸摸該精靈則產生輔助魔法的效果.身上攜帶該屬性精靈,回去與該精靈對話(有兩個一樣的,和特定的那只對話才可)可以進入各個迷宮獲得關於該種屬性的神獸的信息,同時從神獸那獲得各種獎勵.</strong></p>
+<h3 id="spirit-abilities">Spirit abilities</h3>
+<p><strong>サラマンだー:(炎)</strong></p>
+<p><strong>攻（エクスプロード）:以精靈為中心發起大爆發</strong></p>
+<p><strong>輔（フレイムセイバー）:令武器附帶火效果,攻擊敵人有一定幾率令敵人處於著火狀態</strong></p>
+<p><strong>ウンデイーネ:(水)</strong></p>
+<p><strong>攻（アイススマッシュ）:以精靈為中心的十字方向發射冰塊</strong></p>
+<p><strong>輔（アイスセイバー）:令武器附帶冰效果,攻擊敵人有一定幾率令敵人處於冰凍狀態</strong></p>
+<p><strong>ノーム:(地)</strong></p>
+<p><strong>攻（アースクエイク）:以精靈便為中心的斜方向刺出岩石的刺</strong></p>
+<p><strong>輔（ダイヤセイバー）:令武器附帶效果,攻擊敵人有一定幾率令敵人處於無法攻擊的狀態</strong></p>
+<p><strong>ジン:(風)</strong></p>
+<p><strong>攻（エアブラスト）:左向旋轉使出龍捲風攻擊敵人</strong></p>
+<p><strong>輔（サンダーセイバー）:令武器附帶效果,攻擊敵人有一定幾率令敵人處於麻痺狀態</strong></p>
+<p><strong>ドリアード:(木)</strong></p>
+<p><strong>攻（ツリーヴァイン）:以精靈為中心的十字方向放出樹根進行攻擊</strong></p>
+<p><strong>輔（オーラウエイブ）:回復我方異常狀態,同時一定時間我方異常狀態無效化</strong></p>
+<p><strong>ルナ:(月)</strong></p>
+<p><strong>攻（エナジーボール）:以精靈為中心斜方向發射激光</strong></p>
+<p><strong>輔（ライフブースター）:緩慢回復HP</strong></p>
+<p><strong>ウィスプ:(光)</strong></p>
+<p><strong>攻（ホーリーボール）:右向旋轉用光之力量產生的能量塊攻擊敵人</strong></p>
+<p><strong>輔（ヒールライト）:回復HP</strong></p>
+<p><strong>シエイド:(暗)</strong></p>
+<p><strong>攻（ダークフォース）:以精靈為中心發起暗黑力量的爆發</strong></p>
+<p><strong>輔（インビジブル）:令我方處於隱身狀態,敵人無法看見</strong></p>
+<h2 id="gem-reference">Gem Reference</h2>
+<p><strong>　　這個系統給我的第一印象就是洛克人EXE裡的navi customizer系統,通過各個產生異常力量的石頭組裝進輝石版裡,獲得各種能力,一旦獲得的顏色種類超過5個,回去村裡的礦石店裡對話,那三兄弟就會替你改造石版擴大面積.完成某個分支任務後(詳細請留意後面的研究),版面就會替你改造到最大.關於礦石的合成,將在後面給大家一個詳細交代.</strong></p>
+<h2 id="side-quests">Side Quests</h2>
+<p><strong>　　村裡有不少人需要你的幫助,和他們對話的時候有選擇的選擇對話該人物就會給予任務,當然了是有報酬的.另外還有的就是在店裡的小熊冒險協會那裡接受的任務.任務一次最多接兩個.接受完畢可以在菜單裡觀察已有的任務.關於任務的攻略研究將在後面詳細放出.</strong></p>
+<h2 id="main-story-walkthrough">Main Story Walkthrough</h2>
+<p><strong>　　福利克在劍術練習完畢之後來到瑪那之樹面前找提斯一起去祈禱,提斯和福利克提起最近感覺很奇怪的樣子,福利克不太留意這些瑣碎事,提斯也就沒說什麼了,不過提斯交給福利克一份記錄,讓他叫給村長.回去剛出來的房間,見到村長交給他之後,矮人族瓦茲前來拜訪,正當談話之際,突然間發生了地震.眾人馬上出去一看,標誌著瑪那之樹的石碑裂開了,這時更令人驚訝的消息傳來了,提斯還在塔裡,而塔被白光所包圍,事情緊急,福利克馬上前往塔處.準備離開之際,8大屬性精靈前來協助,從中挑出一隻後就出發吧.</strong></p>
+<h3 id="マナの塔">マナの塔</h3>
+<p><strong>　　來到地圖,選擇マナの塔進入,順著唯一的路深入後在下面可以打出光之水滴.按A撿起放置在光圈上就可以來到下一層了.</strong></p>
+<p><strong>　　第二層的光之水滴就在路上,很容易找到,只是光圈附近會出現劍狀敵人,注意回復即可.</strong></p>
+<p><strong>　　第三層的先見到傳送點,在一路深入後的眾敵群中找到光之水滴.</strong></p>
+<p><strong>　　第四層從下方的眾劍系敵人身上打出光之水滴,兩頭的障礙物雖然可以直接破壞但是很費時間,比較好的方法是利用桶子將它們堵住然後通過.</strong></p>
+<p><strong>　　四層均通過後,整理存檔,裝備,即可見到BOSS,可是攻擊幾個回合後,卻發現攻擊完全無效.這時候突然從空中飛下一把大劍,BOSS的防禦狀態隨即被取消了.</strong></p>
+<p><strong>　　BOSS的攻擊方式為衝撞.版邊釋放跟蹤標,注意防禦即可,半血後衝撞速度加快,同時在中央追加大火柱.保證HP供給充足的情況下不算難贏.</strong></p>
+<p><strong>　　戰鬥完畢,聖劍入手</strong></p>
+<p><strong>　　回村,從村長那獲得鏈條,準備完畢後前往村落裡左邊的銀之人魚亭2層獲得風之鼓錘後即可去到其他國家,轉換到星之湖處進入.</strong></p>
+<h3 id="星の湖">星の湖</h3>
+<p><strong>　　1區,剛進入就被圍攻,馬上要躲開攻擊.利用鏈條蓄力從左上的寶箱裡獲得光之水滴,一路來到深處就會見到傳送點,途中的敵人用鏈條攻擊會比較奏效</strong></p>
+<p><strong>　　2區,大型花狀的障礙物無法直接砍開,利用攻擊將敵人打飛的時候撞擊那些障礙即可打開路.光之水滴在右邊區域中間,利用蓄力鏈條可以獲得</strong></p>
+<p><strong>　　3區,刺狀地帶比較多.可以利用畜力鏈條對牆壁攻擊穿越,從起點一直右下行走可以從中間的箱內獲得光之水滴,一路右行即可到達傳送點</strong></p>
+<p><strong>　　4區,將敵人都消滅後就會獲得光之水滴,傳送點在右下方.通過,後完成任務.</strong></p>
+<p><strong>　　</strong></p>
+<p><strong>BOSS戰,攻擊方式主要為護身植物球,一般情況下將它們用鏈條拉出來後幹掉.途中BOSS則會釋放種子,並且利用快速生長攻擊.此時一直走即可躲開.護身球數目減少到一定數量後,會全部釋放出來.同時BOSS會移動到中間,護身球全部自動消失的時候是攻擊的最佳時機.用魔法同時猛攻吧.但注意一定要及時離開,否則護身球出現的話,會被直接秒殺.</strong></p>
+<p><strong>　　戰鬥後從森林之神特連特處獲得特連特的樹枝.</strong></p>
+<p><strong>　　回村,從村長處獲得弓.與村裡的人對話過後回到村長那對話,即可出發.從地圖上獲取新地點,前往紅色沙之沙漠</strong></p>
+<h3 id="赤き砂の砂漠">赤き砂の砂漠</h3>
+<p><strong>　　1區,敵人非常多,可以利用鏈條攻擊產生連鎖反應,從右上方的敵人處獲得光之水滴同時在右上方到達傳送點</strong></p>
+<p><strong>　　2區,一路左行,注意顏色不一樣的草被砍掉後可能會早造成麻痺的異常狀態.可以在左上方的敵人身上獲得光之水滴,傳送點在右下方</strong></p>
+<p><strong>　　3區,傳送點在左上方,從怪物身上打出光之水滴後可以通過.</strong></p>
+<p><strong>　　4區,只需將中間的敵人處理掉就可以過關了.傳送點在右上方</strong></p>
+<p><strong>　　5區,隨機從怪物身上獲得光之水滴.到達最右邊的傳送點即可</strong></p>
+<p><strong>　　6區,隨機從怪物身上獲得光之水滴,傳送點在右下角</strong></p>
+<p><strong>　　7區,從怪物聚集的地方隨機獲得光之水滴,急流沙使用鏈條45度角鉤住牆壁即可通過,從右邊傳送點直接離開</strong></p>
+<p><strong>　　8區,幹掉中間的敵人即可.從右邊離開.</strong></p>
+<p><strong>　　BOSS戰,本次BOSS意外的簡單,外表看似強壯,只要使用弓射擊就可以.要注意躲開的就是那遲鈍的大手攻擊,和它口中噴出的藍火,月字型光波.</strong></p>
+<p><strong>　　戰鬥完畢從大地之神蓋亞處獲得蓋亞之石.</strong></p>
+<p><strong>　　回到村裡,從村長處獲得錘子,完成任一分支任務後從提斯那獲得關於羅利瑪城的信息.直接來到地圖,可以從地圖上獲得新地點ロリマー 冰の城</strong></p>
+<h3 id="ロリマー-冰の城">ロリマー 冰の城</h3>
+<p><strong>　　1層,消滅所有魔物後出現光之水滴,用錘子砸開地圖最右上的冰塊可以見到傳送點.注意地面很滑,行動比較困難</strong></p>
+<p><strong>　　2層,同一層一樣,消滅所有敵人獲得光之水滴,傳送點在盡頭左下角</strong></p>
+<p><strong>　　3層,在右邊區域消滅使用弓箭的敵人可以打出光之水滴,傳送點在右上方,倒T字狀的路先從上面以45度角滑進去,再以45度往左上滑即可進入,小心裡面會出現大量敵人.</strong></p>
+<p><strong>4層,到處都是罐子,一路破壞來到地圖左上方見到唯一的敵人,K掉後拿光之水滴從左下進入下一場景.</strong></p>
+<p><strong>　　5層,消滅所有的狼獲得光之水滴,傳送點在最右邊的冰塊裡,用錘子砸開</strong></p>
+<p><strong>　　6層,直路上的分岔處都是小敵人,會釋放激光,將這些全部消滅後即可獲得光之水滴.傳送點在直路盡頭.</strong></p>
+<p><strong>　　7層,光之水滴藏在寶箱裡,打開之前用弓試探一下,否則是假寶箱的話會比較麻煩.傳送點不在盡頭處.在右邊上方的T狀地區的冰塊內.可以直接打碎.</strong></p>
+<p><strong>　　8層,把右上角的敵人全滅後獲得光之水滴,傳送點在右邊.</strong></p>
+<p><strong>　　BOSS戰,BOSS有些難纏,需要先利用錘子蓄力錘地讓它張開身體,攻擊才有效,普通情況下則需要等它自行張開身體攻擊的時候我方攻擊才有效,一定要注意它縮著身體到處滑的狀態,一般中招起來會連續扣血,容易被秒殺.</strong></p>
+<p><strong>　　</strong></p>
+<p><strong>　　回村,經過劇情之後,地圖上就會出現新地點光之森林,整裝待發後可以直接去.</strong></p>
+<h3 id="光の森">光の森</h3>
+<p><strong>　　1區,消滅所有花狀怪物可以獲得光之水滴,傳送點隨機出現在樹樁下,使用錘子可以開路.</strong></p>
+<p><strong>　　2區,傳送點隨機出現在樹樁下面.用錘子砸開即可見到,注意毒蘑菇的顏色.用遠程攻擊將那些都清理掉.中毒的話比較麻煩,消滅所有敵人即可獲得光之水滴</strong></p>
+<p><strong>　　3區,傳送點就在剛出來的右邊的場景內,用錘子可以砸開見到,找到所有南瓜怪並消滅即可獲得光之水滴.</strong></p>
+<p><strong>　　4區,砸下開關.消滅中間的敵人即可通過</strong></p>
+<p><strong>　　5區,地洞不能踩上去,否則會受傷並且彈開,只能從中間穿過,傳送點在右邊的樹樁下.消滅所有敵人後過得去光之水滴</strong></p>
+<p><strong>　　6區,消滅所有敵人獲得光之水滴,被包圍在中間的寶箱需要利用鏈條獲得.傳送點在最右邊</strong></p>
+<p><strong>　　7區,依照順序敲下所有的開關,注意很多蜜蜂,一定要小心不要被圍攻了,傳送點在上方的樹樁下,從窩牛狀敵人身上打出光之水滴.</strong></p>
+<p><strong>　　8區,幹掉所有敵人後出現光之水滴,這裡很多地洞,要注意.</strong></p>
+<p><strong>　　BOSS戰,大旋風一個,普通攻擊無法打進去,用錘子來打高爾夫將光球攻向BOSS.不過這確實難做到.等BOSS旋風稍弱的時候直接衝進去攻擊是不錯的方法.</strong></p>
+<p><strong>　　劇情後回村,得知提斯不在了.整頓好裝備後馬上尋找,來到提斯一直待著的石碑那裡調查,突然間福利克來到了一個奇怪的地方.(如果從這裡出來了,以後再進去需要從地圖進去,需要注意)</strong></p>
+<p><strong>　　</strong></p>
+<h3 id="虛なる地">虛なる地</h3>
+<p><strong>　　1區,幹掉所有的羊後獲得光之水滴.傳送點在右上方</strong></p>
+<p><strong>　　2區,傳送點在右上方,羊很多,一定要小心,幹掉所有敵人後獲得光之水滴</strong></p>
+<p><strong>　　3區,在中間的橋那裡打掉眼狀敵人獲得光之水滴,傳送點在大型植物下面,用錘子砸開　　</strong></p>
+<p>        <strong>4區,將小BOSS幹掉後即可通過.</strong></p>
+<p><strong>　　5區,從拿著三叉的敵人身上打出光之水滴.來到上面打下開關,從中間上去砸開植物來到出口</strong></p>
+<p><strong>　　6區,將所有開關都打下去之後從上方的寶箱內可以獲得光之水滴.傳送點隱藏在植物下面.</strong></p>
+<p><strong>　　7區,傳送點在右下的植物下面,從蛇尾敵人那獲得光之水滴.敵人是無限出現的,不要戀戰.</strong></p>
+<p><strong>　　8區,消滅右上方所有敵人即可通過</strong></p>
+<p><strong>　　9區,利用錘子砸開右上的植物找到傳送點.光之水滴則在石門左邊不起眼的石頭裡,打碎即可</strong></p>
+<p><strong>　　10區,光之水滴在大樹敵人身上,全滅這些樹敵人即可.傳送點在植物下面,使用錘子即可</strong></p>
+<p><strong>　　11區,光之水滴藏在右邊的寶箱內.傳送點就在附近地區的植物下面.盡量打開所有寶箱即可.</strong></p>
+<p><strong>　　12區,消滅所有敵人可獲得光之水滴.但是注意需要用遠程攻擊的才可以,同時使用鏈條獲得.傳送點在下面.</strong></p>
+<p><strong>　　BOSS,用普通打法回非常難對付.一般來說是用箭直接攻擊到對方散開之後攻擊眼睛發亮的鬼會奏效.不過顯然很難,而且對手經常利用觸手從地下突然攻擊.對我方實在不利.應該引誘BOSS跳躍到地圖版上的寶石柱上.這樣就會掉落大寶石,利用錘子打飛這個就可以直接給BOSS造成傷害了.</strong></p>
+<p><strong>　　</strong></p>
+<p><strong>　　回村稍做準備即可前往地圖的新迷宮.生命の道</strong></p>
+<h3 id="生命の道">生命の道</h3>
+<p><strong>　　1區,敵人數目異常之多,一定要小心,尤其是會衝撞的狼尤為討厭,稍微不留意就會被秒殺.傳送點在最頂上,用錘子砸開植物即可,消滅所有狼獲得光之水滴</strong></p>
+<p><strong>　　2區,光之水滴在骷髏狀敵人身上,打倒後就會出現了.傳送點在右邊的植物下面</strong></p>
+<p><strong>　　3區,花狀敵人會過來自爆,注意及時攻擊或者躲開,光之水滴在最右邊的寶箱裡,小心假寶箱.傳送點在正上方</strong></p>
+<p><strong>　　4區,幹掉持劍的敵人後即可獲得光之水滴.</strong></p>
+<p><strong>　　5區,光之水滴在右下角草叢裡,右上角為傳送點.</strong></p>
+<p><strong>　　6區,從狼身上打出光之水滴,用錘子砸開內圈的右上方的植物找到傳送點.</strong></p>
+<p><strong>　　7區,在正中間可以用錘子砸開植物找到傳送點,光之水滴則在跟蹤刺狀物體後面的寶箱裡面,可以在另一頭用鏈條打開,注意噴出導致異常狀態光線的桶.可以用錘子轉換其方向.</strong></p>
+<p><strong>　　8區,將中間所有的劍士幹掉後即可　　</strong></p>
+<p><strong>　　9區,傳送點在右下的雜草內,將所有的狼幹掉後會掉出光之水滴,</strong></p>
+<p><strong>　　10區,傳送點在右上方的大植物下面,用錘子可以砸開,消滅骷髏狀敵人可以通過</strong></p>
+<p><strong>　　11區,一路上去可以在一處很多刺的地方從寶箱內獲得光之水滴,其餘的寶箱獲得之前先用錘子砸一下刺,切換其位置就可以輕鬆獲得了.左邊的寶箱被圍住,利用鏈條獲得,出口在最右上方</strong></p>
+<p><strong>　　12區,將所有劍士幹掉即可,寶箱要在兩頭利用鏈條獲得</strong></p>
+<p><strong>　　BOSS瑪那之王會很多魔法,不必理會,直接上去一頓亂砍就是了,第二形態他會拿起聖劍,不過這也沒什麼,多準備幾個回復道具照樣衝上去一頓亂砍即可輕易獲勝.</strong></p>
+<p><strong>　　戰後,瑪那之王奉獻出自己的生命交給了瑪那之力.而此時上空出現了新的異界.回村準備完畢後即可在地圖前往異界.</strong></p>
+<h3 id="異界">異界</h3>
+<p><strong>　　1層.全滅敵人獲得光之水滴,在下方正中央破壞結晶可以打開傳送點</strong></p>
+<p><strong>　　2層,光之水滴在左下方的寶箱內,傳送點則在正下方的結晶下面,用錘子砸開</strong></p>
+<p><strong>　　3層,一路直上去即可在途中的水晶內打出光之水滴,傳送點在中間靠右的部位,值得一提的是要加大完成度上面的寶箱是有必要打開的.將阻止前進的黑洞幹掉即可,小心的是劍系敵人的攻擊</strong></p>
+<p><strong>　　4層.猛攻單獨這個敵人即可,千萬不要給它喘氣的機會</strong></p>
+<p><strong>　　5層,尋找地上的魔法陣,並且打出所有的恐龍即可,傳送點在右上方,各個寶箱由於被大結晶阻擋,需要利用錘子將敵人打飛並且撞擊上去才可以打開.</strong></p>
+<p><strong>　　6層,消滅所有的小矮人獲得光之水滴,左上的大結晶裡是傳送點</strong></p>
+<p><strong>　　7層,右邊的水晶裡就有光之水滴,傳送點也不難找,注意砸開水晶和大結晶即可</strong></p>
+<p><strong>　　8層,集中火力攻擊最大塊頭那個就可以獲得光之水滴並且離開了.</strong></p>
+<p><strong>　　9層,單挑另外三個主角的幻影.異常簡單....只要不被他們反擊,可以1分鐘內結束戰鬥是不難的事</strong></p>
+<p><strong>　　10層,傳送點在正中央下方,光之水滴則隨機出現在寶箱裡.本層無難點.</strong></p>
+<p><strong>　　11層,傳送點在正中央,而光之水滴則在隨機出現的兩條巨龍身上.一般情況下只能全滅敵人才會獲得</strong></p>
+<p><strong>　　12層,光之水滴位於左邊的寶箱內,來到最上方,從最左上角可以打出傳送點</strong></p>
+<p><strong>　　13層,將兩頭的中頭目幹掉後即可,要利用錘子攻擊水球將障礙物清除</strong></p>
+<p><strong>　　14層,傳送點在最右上角的結晶處,光之水滴隨機出現在各個水晶內</strong></p>
+<p><strong>　　15層,利用錘子砸開中間的結晶可以找到傳送點,將所有的巨龍消滅後可以獲得光之水滴</strong></p>
+<p><strong>　　16層,傳送點在區域的最頂端,途中的黑洞需要打掉才可以通過,而光之水滴則在最左上方的水晶那兒.</strong></p>
+<p><strong>　　17層,將最上面的與眾不同的雜兵幹掉即可獲得光之水滴,由於必經之路有刺.所以利用錘子把水球打過去就行了.輔助弓箭攻擊.</strong></p>
+<p><strong>　　最終BOSS,感覺之後的BOSS已經沒有之前的難打了.注意地面生長出綠色的植物時不斷地跑,躲開上面的攻擊即可,其餘時間看著地圖留意BOSS出現位置猛攻即可.</strong></p>
+<p><strong>　　欣賞完ENDING後,會回到村落裡,繼續未完的故事.攻略也暫告一段落,研究也會接著開始.</strong></p>
+<h2 id="gem-reference-full-list">Gem Reference: Full List</h2>
+<p><strong>又通過各個產生異常力量的石頭組裝進輝石版裡，獲得各種能力。由打怪、開寶箱、商店獲得。</strong></p>
+<p><strong>整個輝石系統分7個顏色</strong></p>
+<p><strong>レッド（紅色）：武器攻擊強弱變化</strong></p>
+<p><strong>ブルー（藍色）：魔法的等級、MP、魔法攻擊力的變化</strong></p>
+<p><strong>イエロー（黃色）：回復效果、物理防禦、精神的變化</strong></p>
+<p><strong>パープル（紫紅色）：FEVER、必殺技等級的變化</strong></p>
+<p><strong>オレンジ（橙色）：經驗值、道具的變化</strong></p>
+<p><strong>グリーン（綠色）：狀態異常、地面異常等無效</strong></p>
+<p><strong>インピュア：其他類，可能有副作用的</strong></p>
+<p><strong>命の結晶：力の結晶＋力の結晶</strong></p>
+<p><strong>最大HP+30， 2X1</strong></p>
+<p><strong>命の結晶：為此輝石名稱</strong></p>
+<p><strong>力の結晶＋力の結晶：為此輝石合成方法，合成2者前後順序無所謂，並且有些輝石合成方法不唯一。如果商店有賣或是非合成輝石則無說明，</strong></p>
+<p><strong>最大HP+30：為此輝石效果</strong></p>
+<p><strong>2X1：為占格數，2為橫格，1為豎格</strong></p>
+<p><strong>下同</strong></p>
+<h3 id="red-weapon-and-physical-effects">Red: Weapon and physical effects</h3>
+<h4 id="all-weapons">All weapons</h4>
+<p><strong>命の結晶：力の結晶＋力の結晶</strong></p>
+<p><strong>最大HP+30， 2X1</strong></p>
+<p><strong>異世界の命：最大HP上升。1X1</strong></p>
+<p><strong>力の結晶：物理攻擊力+4。1X1</strong></p>
+<p><strong>ケモノのたましい：物理攻擊力+8。1X1</strong></p>
+<p><strong>ドラゴンのたましい：物理攻擊力+12。2X1</strong></p>
+<p><strong>異世界の力：最大物理攻擊力上升。1X1</strong></p>
+<p><strong>ジェマのたましい：スティールフック+ソニックウェイブ</strong></p>
+<p><strong>物理攻擊力+25，物理防禦力+10。3X2</strong></p>
+<p><strong>ジェマのほこり：スティールフック+マイティガード</strong></p>
+<p><strong>物理攻擊力+10，物理防禦力+25。3X2</strong></p>
+<p><strong>ジェマの力：ジャイアントスイング+スリーウェイショット</strong></p>
+<p><strong>物理攻擊力+20。2X2</strong></p>
+<h4 id="劍">劍</h4>
+<p><strong>ソニックウェイブ：用劍攻擊時，連擊第3次為吹飛攻擊。2X1</strong></p>
+<p><strong>マイティガード：用劍防禦的回合數變為10。 1X2</strong></p>
+<p><strong>ソードファイター:用劍攻擊時，物理攻擊力+10。1X2</strong></p>
+<p><strong>ある少年への光：用劍攻擊時，物理攻擊力+20，物理防禦力和必殺+10。1X2</strong></p>
+<p><strong>ダブルアタック：力の結晶＋ソニックウェイブ</strong></p>
+<p><strong>劍普通攻擊變為雙倍傷害。 2X1</strong></p>
+<p><strong>ダブルソニック：ソニックウェイブ+ソニックウェイブ</strong></p>
+<p><strong>劍普通攻擊時為雙倍傷害，且第3次攻擊為吹飛攻擊。 2X1</strong></p>
+<p><strong>ソードマスター：ソニックウェイブ+マイティガード=</strong></p>
+<p><strong>劍攻擊力+8，雙倍傷害，第3次攻擊吹飛。 2X1</strong></p>
+<p><strong>絕對ぼうぎょ：力の結晶＋マイティガード</strong></p>
+<p><strong>劍的防禦所受傷害完全無效。 1X2</strong></p>
+<p><strong>絕對ぼうぎょ·改：マイティガード+マイティガード</strong></p>
+<p><strong>劍防禦回合數變為10，並且完全不受傷害。 2X2</strong></p>
+<h4 id="鏈條">鏈條</h4>
+<p><strong>スティールフック：用鏈條蓄力攻擊怪物可以偷其物品。1X1</strong></p>
+<p><strong>ジャイアントスイング：用鏈條攻擊時，連續迴旋3次。2X1</strong></p>
+<p><strong>フレイルファイター：用鏈條攻擊時，物理攻擊力+10。1X2</strong></p>
+<p><strong>フックショット：力の結晶+スティールフック</strong></p>
+<p><strong>用鏈條攻擊的蓄力攻擊時，鏈條可將敵人穿過。1X1</strong></p>
+<p><strong>大回轉：力の結晶+ジャイアントスイング</strong></p>
+<p><strong>用鏈條攻擊時回轉速度上升。2X1</strong></p>
+<p><strong>フレイルマスター：スティールフック+ジャイアントスイング</strong></p>
+<p><strong>鏈條攻擊力+8，連續快速迴旋3次。2X1</strong></p>
+<p><strong>スティールショット：スティールフック+スティールフック</strong></p>
+<p><strong>用鏈條蓄力攻擊時貫穿敵人並偷其道具。1X2</strong></p>
+<p><strong>ジャイアント大回轉：ジャイアントスイング+ジャイアントスイング</strong></p>
+<p><strong>用鏈條攻擊時，回轉速度上升，並連續回轉3次。2X1</strong></p>
+<h4 id="弓">弓</h4>
+<p><strong>スリーウェイショット：用弓攻擊時，弓箭向3個方向攻擊。2X1</strong></p>
+<p><strong>大音量：用弓蓄力攻擊的音符效果範圍更廣。1X2</strong></p>
+<p><strong>ボウファイター：用弓攻擊時，物理攻擊力+10。1X2</strong></p>
+<p><strong>つらぬきの矢：力の結晶+スリーウェイショット</strong></p>
+<p><strong>用弓攻擊時，弓箭可將敵人穿過。2X1</strong></p>
+<p><strong>ララバイ：力の結晶+大音量</strong></p>
+<p><strong>用弓的蓄力攻擊時的音符效果為睡眠。1X2</strong></p>
+<p><strong>つらぬきスリーウェイ：スリーウェイショット+スリーウェイショット</strong></p>
+<p><strong>用弓攻擊時，弓箭貫穿敵人並向3個方向攻擊。2X1</strong></p>
+<p><strong>ロビンフッド：スリーウェイショット+大音量</strong></p>
+<p><strong>弓攻擊力+8，弓箭貫穿敵人並向3個方向攻擊。2X1</strong></p>
+<p><strong>レクイエム：大音量+大音量</strong></p>
+<p><strong>用弓蓄力攻擊的音符效果範圍變大並有催眠效果。1X2</strong></p>
+<h4 id="錘">錘</h4>
+<p><strong>ブレイクショット：用錘攻擊時，能將對手擊飛的更遠。2X1</strong></p>
+<p><strong>ワイドスタンプ：用錘蓄力攻擊時，對地面的影響範圍更廣。1X2</strong></p>
+<p><strong>ハンマーファイター：用錘攻擊時，物理攻擊力+10。1X2</strong></p>
+<p><strong>パワースイング：力の結晶+ブレイクショット</strong></p>
+<p><strong>錘的攻擊時間間距變短。2X1</strong></p>
+<p><strong>スプリングショック：力の結晶+ワイドスタンプ</strong></p>
+<p><strong>用錘蓄力攻擊時，附近的怪會眩暈。1X2</strong></p>
+<p><strong>パワーショット：ブレイクショット+ブレイクショット</strong></p>
+<p><strong>用錘攻擊時間間距變小，並可以將敵人打的更遠。2X1</strong></p>
+<p><strong>マスターオブハンマー：ブレイクショット+ワイドスタンプ</strong></p>
+<p><strong>錘攻擊力+8，攻擊時間間距變小，並可以將敵人打的更遠。2X1</strong></p>
+<p><strong>ワイドショック：ワイドスタンプ+ワイドスタンプ</strong></p>
+<p><strong>用錘的蓄力攻擊影響範圍變廣並且對敵人有眩暈效果。2X2</strong></p>
+<p><strong>（全）</strong></p>
+<h3 id="blue-magic-effects">Blue: Magic effects</h3>
+<h4 id="all-magic">All magic</h4>
+<p><strong>知識の結晶：魔法攻擊力+4。1X1</strong></p>
+<p><strong>異世界の知識：魔法攻擊力上升。1X1</strong></p>
+<p><strong>魔力の結晶：知識の結晶+知識の結晶</strong></p>
+<p><strong>最大MP+30。1X2</strong></p>
+<p><strong>異世界の魔力：最大MP上升。1X1</strong></p>
+<p><strong>ある幼子への光：用鏈條攻擊時，物理攻擊力+20，魔法攻擊力和防禦力+10。1X1</strong></p>
+<p><strong>精靈たちのたましい：ノームの友+ウィスプの友</strong></p>
+<p><strong>全部魔法必要MP減少10%。2X2</strong></p>
+<p><strong>精靈たちの心：全部魔法必要MP減少30%。2X2</strong></p>
+<p><strong>精靈たちのほこり：ウィスプの友+シェイドの友</strong></p>
+<p><strong>全部魔法變為2級。2X1</strong></p>
+<p><strong>精靈たちの力：ノームの友+ジンの友</strong></p>
+<p><strong>全部魔法變為2級。1X2</strong></p>
+<p><strong>精靈たちのきずな：全部魔法變為3級。2X2</strong></p>
+<h4 id="spirit-specific-magic">Spirit-specific magic</h4>
+<p><strong>サラマンダーの友：サラマンダー的魔法變為2級。 2X1</strong></p>
+<p><strong>サラマンダーのきずな：サラマンダーの友+サラマンダーの友</strong></p>
+<p><strong>サラマンダー的魔法變為3級。 2X2</strong></p>
+<p><strong>サラマンダーの心：知識の結晶+サラマンダーの友</strong></p>
+<p><strong>サラマンダー的魔法必要MP減少40%。 2X2</strong></p>
+<p><strong>ウンディーネの友：ウンディーネ的魔法變為2級。 2X1</strong></p>
+<p><strong>ウンディーネのきずな：ウンディーネの友+ウンディーネの友</strong></p>
+<p><strong>ウンディーネ的魔法變為3級。 2X2</strong></p>
+<p><strong>ウンディーネの心：知識の結晶+ウンディーネの友</strong></p>
+<p><strong>ウンディーネ的魔法必要MP減少40%。 2X2</strong></p>
+<p><strong>ノームの友：ノーム的魔法變為2級。 2X1</strong></p>
+<p><strong>ノームのきずな：ノームの友+ノームの友</strong></p>
+<p><strong>ノーム的魔法變為3級。 2X2</strong></p>
+<p><strong>ノームの心：知識の結晶+ノームの友</strong></p>
+<p><strong>ノーム的魔法必要MP減少40%。 2X2</strong></p>
+<p><strong>ジンの友:ジン的魔法變為2級。 2X1</strong></p>
+<p><strong>ジンのきずな：ジンの友+ジンの友</strong></p>
+<p><strong>ジン的魔法變為3級。 2X2</strong></p>
+<p><strong>ジンの心：知識の結晶+ジンの友</strong></p>
+<p><strong>ジン的魔法必要MP減少40%。 2X2</strong></p>
+<p><strong>ドリアードの友：ドリアード的魔法變為2級。 1X2</strong></p>
+<p><strong>ドリアードのきずな：ドリアードの友+ドリアードの友</strong></p>
+<p><strong>ドリアード的魔法變為3級。 2X2</strong></p>
+<p><strong>ドリアードの心：知識の結晶+ドリアードの友</strong></p>
+<p><strong>ドリアード的魔法必要MP減少40%。 2X2</strong></p>
+<p><strong>ルナの友：ルナ的魔法變為2級。 1X2</strong></p>
+<p><strong>ルナのきずな：ルナの友+ルナの友</strong></p>
+<p><strong>ルナ的魔法變為3級。 2X2</strong></p>
+<p><strong>ルナの心：知識の結晶+ルナの友</strong></p>
+<p><strong>ルナ的魔法必要MP減少40%。 2X2</strong></p>
+<p><strong>ウィスプの友：ウィスプ的魔法變為2級。 1X2</strong></p>
+<p><strong>ウィスプのきずな：ウィスプの友+ウィスプの友</strong></p>
+<p><strong>ウィスプ的魔法變為3級。 2X2</strong></p>
+<p><strong>ウィスプの心：知識の結晶+ウィスプの友</strong></p>
+<p><strong>ウィスプ的魔法必要MP減少40%。 2X2</strong></p>
+<p><strong>シェイドの友：シェイド的魔法變為2級。 1X2</strong></p>
+<p><strong>シェイドのきずな：シェイドの友+シェイドの友</strong></p>
+<p><strong>シェイド的魔法變為3級。2X2</strong></p>
+<p><strong>シェイドの心：知識の結晶+シェイドの友</strong></p>
+<p><strong>シェイド的魔法必要MP減少40%。2X2</strong></p>
+<p><strong>（全）</strong></p>
+<h3 id="yellow-recovery-and-defense">Yellow: Recovery and defense</h3>
+<h4 id="recovery-and-defense">Recovery and defense</h4>
+<p><strong>守りの結晶：物理防禦力+4。1X1</strong></p>
+<p><strong>異世界の守り：物理防禦力上升。1X2</strong></p>
+<p><strong>心の結晶：魔法防禦力+4。1X1</strong></p>
+<p><strong>異世界の心：魔法防禦力上升。1X1</strong></p>
+<p><strong>めいそう：守りの結晶+かんごしの心得</strong></p>
+<p><strong>3秒回復HP2點。2X2</strong></p>
+<p><strong>ふかきめいそう：心の結晶+かんごしの心得</strong></p>
+<p><strong>3秒回復HP4點。3X2</strong></p>
+<p><strong>千年石：3秒回復MP2點。1X1</strong></p>
+<p><strong>まじない：守りの結晶+魔法使いの心得</strong></p>
+<p><strong>3秒回復MP2點。2X2</strong></p>
+<p><strong>つよきまじない：心の結晶+魔法使いの心得</strong></p>
+<p><strong>3秒回復MP4點。3X2</strong></p>
+<p><strong>しゅくふく：守りの結晶+天使の心得</strong></p>
+<p><strong>3秒回復HP和MP3點。3X2</strong></p>
+<p><strong>かがやきのしゅくふく:心の結晶+天使の心得</strong></p>
+<p><strong>3秒回復HP和MP6點。3X3</strong></p>
+<p><strong>神秘のしゅくふく：3秒回復HP和MP6點。3X2</strong></p>
+<h4 id="item-effect-gems">Item-effect gems</h4>
+<p><strong>草花のいたわり：プリプリ草（解毒以外異常狀態）的效果變為全體。1X1</strong></p>
+<p><strong>星くずのいたわり：星くずのハーブ（解毒藥）的效果變為全體。1X1</strong></p>
+<p><strong>かんごしの心得：HP回復系的道具回復量變為2倍。2X1</strong></p>
+<p><strong>魔法使いの心得：MP回復系的道具回復量變為2倍。1X2</strong></p>
+<p><strong>天使の心得：使用天使的聖盃復活時HP全滿。1X2</strong></p>
+<p><strong>至高のいたわり：守りの結晶+星くずのいたわり</strong></p>
+<p><strong>所有的道具效果均為全體使用。 2X2</strong></p>
+<p><strong>かんごしのいたわり：草花のいたわり+かんごしの心得</strong></p>
+<p><strong>HP回復道具效果為全體。1X2</strong></p>
+<p><strong>魔法使いのいたわり：草花のいたわり+魔法使いの心得</strong></p>
+<p><strong>MP回復道具效果為全體。1X2</strong></p>
+<p><strong>いやしてのいたわり：心の結晶+星くずのいたわり</strong></p>
+<p><strong>回復HPMP的道具效果為全體。 1X2</strong></p>
+<p><strong>天使のいたわり：草花のいたわり+天使の心得</strong></p>
+<p><strong>天使的聖盃道具效果為全體。1X2</strong></p>
+<p><strong>藥師の心得：かんごしの心得+かんごしの心得</strong></p>
+<p><strong>HP回復系的道具回復量變為5倍。2X2</strong></p>
+<p><strong>藥師のいたわり：かんごしの心得+天使の心得</strong></p>
+<p><strong>HP回復系的道具回復量變為2倍，並且效果為全體。3X3</strong></p>
+<p><strong>魔術師の心得:魔法使いの心得+魔法使いの心得</strong></p>
+<p><strong>MP回復系的道具回復量變為5倍。1X2</strong></p>
+<p><strong>魔術師のいたわり：魔法使いの心得+天使の心得</strong></p>
+<p><strong>MP回復系的道具回復量變為2倍，並且效果為全體。3X3</strong></p>
+<p><strong>いやしての心得:かんごしの心得+魔法使いの心得</strong></p>
+<p><strong>HP和MP回復系道具回復量均為2倍。2X2</strong></p>
+<p><strong>道具使いの心得：HP和MP回復系道具回復量均為5倍。2X3</strong></p>
+<h4 id="automatic-item-use-gems">Automatic item-use gems</h4>
+<p><strong>あきらめない勇氣：守りの結晶+守りの結晶</strong></p>
+<p><strong>當生命為0時自動使用天使的聖盃復活。 3X2</strong></p>
+<p><strong>たえぬく勇氣：星くずのいたわり+星くずのいたわり</strong></p>
+<p><strong>星くずのハーブ（解毒藥）自動使用。 2X1</strong></p>
+<p><strong>立ち向かう勇氣：草花のいたわり+草花のいたわり</strong></p>
+<p><strong>プイプイ草（解毒以外異常狀態）自動使用。1X2</strong></p>
+<p><strong>くじけない勇氣：草花のいたわり+星くずのいたわり</strong></p>
+<p><strong>狀態異常時，自動使用道具恢復。1X2</strong></p>
+<p><strong>ある旅人への光：用錘攻擊時，物理攻擊力+20，物理防禦力和魔法防禦力+10。1X1</strong></p>
+<p><strong>ある少女への光：用弓攻擊時，物理攻擊力+20，魔法攻擊力和必殺+10。1X1</strong></p>
+<p><strong>（全）</strong></p>
+<h3 id="purple-fever-and-special-attacks">Purple: FEVER and special attacks</h3>
+<h4 id="fever-gems">FEVER gems</h4>
+<p><strong>FEVERスロット：FEVER條具有插口功能（？）。2X1</strong></p>
+<p><strong>ダブルフィーバー：FEVER狀態中得到的經驗值變為2倍。3X2</strong></p>
+<p><strong>えいゆうの精神：スティールフック+知識の結晶</strong></p>
+<p><strong>FEVER持續時間變為2倍。2X2</strong></p>
+<p><strong>しきこうよう：ソニックウェイブ+ノームの友</strong></p>
+<p><strong>FEVER的收集速度加快。1X2</strong></p>
+<h4 id="special-attack-gems">Special-attack gems</h4>
+<p><strong>ひらめきの結晶：力の結晶＋知識の結晶</strong></p>
+<p><strong>技（必殺）+10。1X1</strong></p>
+<p><strong>異世界のひらめき：必殺上升。1X1</strong></p>
+<p><strong>奧義·ジェマ：全部武器必殺技變為2級。2X2</strong></p>
+<p><strong>奧義·ソード：劍的必殺技變為2級。1X1</strong></p>
+<p><strong>奧義·フレイル：鏈條的必殺技變為2級。1X1</strong></p>
+<p><strong>奧義·ボウ：弓的必殺技變為2級。1X1</strong></p>
+<p><strong>奧義·ハンマー：錘的必殺技變為2級。1X1</strong></p>
+<p><strong>うら奧義·ジェマ：全部武器必殺技變為3級。2X2</strong></p>
+<p><strong>うら奧義·ソード：力の結晶＋サラマンダーの友</strong></p>
+<p><strong>劍的必殺技變為3級。2X1</strong></p>
+<p><strong>うら奧義·フレイル：力の結晶＋ウンディーネの友</strong></p>
+<p><strong>鏈條的必殺技變為3級。 2X1</strong></p>
+<p><strong>うら奧義·ボウ：力の結晶＋ジンの友</strong></p>
+<p><strong>弓的必殺技變為3級。2X1</strong></p>
+<p><strong>うら奧義·ハンマー：力の結晶＋ノームの友</strong></p>
+<p><strong>錘的必殺技變為3級。2X1</strong></p>
+<p><strong>（全）</strong></p>
+<h3 id="orange-experience-and-item-effects">Orange: Experience and item effects</h3>
+<p><strong>とうぞくの心：力の結晶＋守りの結晶</strong></p>
+<p><strong>在雷達上將危險的寶箱做為怪物出現。1X1</strong></p>
+<p><strong>急成長の心：力の結晶+心の結晶</strong></p>
+<p><strong>打倒怪物所得經驗上漲50%。2X2</strong></p>
+<p><strong>倍倍ゲーム：力の結晶+草花のいたわり</strong></p>
+<p><strong>打倒怪物後掉寶率變為2倍。2X2</strong></p>
+<p><strong>二キータ族の心得：ソニックウェイブ+星くずのいたわり</strong></p>
+<p><strong>揀掉在地上的錢，獲得比平時多10%。2X2</strong></p>
+<p><strong>ライフスティール：スティールフック+かんごしの心得</strong></p>
+<p><strong>攻擊怪物獲得傷害的3%回復HP（吸血）。2X1</strong></p>
+<p><strong>マインドスティール：スティールフック+魔法使いの心得</strong></p>
+<p><strong>攻擊怪物獲得傷害的3%回復MP（吸魔）。1X2</strong></p>
+<p><strong>ソウルスティール：スティールフック+天使の心得</strong></p>
+<p><strong>攻擊怪物獲得傷害的3%回復HP和MP（吸血魔）。2X2</strong></p>
+<p><strong>（全）</strong></p>
+<h3 id="green-status-and-terrain-protection">Green: Status and terrain protection</h3>
+<p><strong>大地の加護：ノームの友+星くずのいたわり</strong></p>
+<p><strong>硬化狀態無效。2X1</strong></p>
+<p><strong>そよ風の加護：ジンの友+星くずのいたわり</strong></p>
+<p><strong>麻痺狀態無效。2X1</strong></p>
+<p><strong>光の加護：ウィスプの友+星くずのいたわり</strong></p>
+<p><strong>眩暈狀態無效。1X2</strong></p>
+<p><strong>闇の加護：シェイドの友+星くずのいたわり</strong></p>
+<p><strong>黑暗狀態無效。1X2</strong></p>
+<p><strong>きよらかなる加護：知識の結晶+守りの結晶</strong></p>
+<p><strong>毒狀態無效。1X2</strong></p>
+<p><strong>ほのおの加護:サラマンダーの友+星くずのいたわり</strong></p>
+<p><strong>燒火狀態無效。2X1</strong></p>
+<p><strong>れいすいの加護：ウンティーネの友+星くずのいたわり</strong></p>
+<p><strong>雪人狀態無效。2X1</strong></p>
+<p><strong>しんりんの加護：ドリアードの友+星くずのいたわり</strong></p>
+<p><strong>睡眠狀態無效。1X2</strong></p>
+<p><strong>月光の加護：ルナの友+星くずのいたわり</strong></p>
+<p><strong>混亂狀態無效。1X2</strong></p>
+<p><strong>至高の加護：知識の結晶+心の結晶</strong></p>
+<p><strong>所有異常狀態無效。3X2</strong></p>
+<p><strong>ワナぬけの守り：ノームの友+守りの結晶</strong></p>
+<p><strong>走帶刺的地面上像普通行走一樣。2X2</strong></p>
+<p><strong>安定の守り：ノームの友+心の結晶</strong></p>
+<p><strong>走流沙、冰凍的地面上像普通行走一樣。2X2</strong></p>
+<p><strong>（全）</strong></p>
+<h3 id="other-and-imperfect-gems">Other and imperfect gems</h3>
+<h4 id="normally-red">Normally red</h4>
+<p><strong>バーサーカー：物理攻擊力+15，物理防禦力-10。2X1</strong></p>
+<p><strong>バーバリアン：物理攻擊力和防禦力+12，魔法攻擊力和防禦力-5。2X2</strong></p>
+<p><strong>生命のみなもと：最大HP+50。1X2</strong></p>
+<p><strong>くもった生命の石：最大HP+50，物理防禦力-10。2X1</strong></p>
+<p><strong>Ｖハンマーのごくい：錘攻擊力+8，攻擊時間間距變小，並可以將敵人打的更遠。1X1</strong></p>
+<h4 id="normally-blue">Normally blue</h4>
+<p><strong>くもった魔力の石：最大MP+30，魔法防禦力-5。2X1</strong></p>
+<p><strong>ウィザード：魔法攻擊力+15，魔法防禦力-10。2X1</strong></p>
+<p><strong>ワイズマン：魔法攻擊力和防禦力+12，物理攻擊力和防禦力-5。2X2</strong></p>
+<p><strong>邪精靈たちの友：全部魔法變為2級，物理攻擊力-10。2X1</strong></p>
+<p><strong>邪精靈たちのきずな：全部魔法變為3級，物理攻擊力-50。2X2</strong></p>
+<p><strong>邪精靈たちの心：全部魔法必要MP減少30%，物理攻擊力-50。2X2</strong></p>
+<h4 id="normally-yellow">Normally yellow</h4>
+<p><strong>プロテクター：物理防禦力+20，魔法防禦力-20。1X1</strong></p>
+<p><strong>マジックバリア：魔法防禦力+20，物理防禦力-20。1X1</strong></p>
+<p><strong>不安なめいそう：3秒回復HP3點，物理防禦力-5。2X2</strong></p>
+<p><strong>魔女のめいそう：3秒回復HP5點，物理防禦力-10。3X2</strong></p>
+<p><strong>魔女のまじない：3秒回復MP5點，魔法防禦力-10。3X2</strong></p>
+<p><strong>不安なしゅくふく：3秒回復HP和MP8點，物理和魔法攻擊力-30。2X3</strong></p>
+<p><strong>魔女のしゅくふく：3秒回復HP和MP10點，物理和魔法攻擊力-50。3X3</strong></p>
+<p><strong>藥師のたまご：HP回復系的道具回復量變為2倍，但容易狀態異常。2X2</strong></p>
+<p><strong>魔術師のたまご：MP回復系的道具回復量變為2倍，但容易狀態異常。2X2</strong></p>
+<p><strong>道具使いのたまご：回復系的道具回復量變為5倍，但容易狀態異常。2X2</strong></p>
+<p><strong>小さな抵抗：星くずのハーブ（解毒藥）自動使用，但容易狀態異常。1X1</strong></p>
+<p><strong>小さな勇氣：プイプイ草（解非毒藥）自動使用，但容易狀態異常。1X1</strong></p>
+<p><strong>小さな希望：天使的聖盃自動使用，同時燒火狀態。1X2</strong></p>
+<h4 id="normally-orange">Normally orange</h4>
+<p><strong>岩石王の勇氣：打倒怪物所得經驗上漲75%，物理防禦力-20。2X2</strong></p>
+<p><strong>急成長のたましい：打倒怪物所得經驗上漲75%，道具掉落幾率下降。2X2</strong></p>
+<p><strong>幸か不幸か：揀掉在地上的錢，獲得比平時多20%，道具掉落幾率下降。1X1</strong></p>
+<p><strong>命のかわき：吸血3%，物理攻擊力-10。1X1</strong></p>
+<p><strong>心のかわき：吸魔3%，魔法攻擊力-10。1X1</strong></p>
+<p><strong>たましいのかわき：吸血魔3%，物理和魔法攻擊力-10。1X1</strong></p>
+<h4 id="normally-green">Normally green</h4>
+<p><strong>火と水のいたずら：容易中火燒或雪人狀態，但中其他狀態幾率低。2X2</strong></p>
+<p><strong>土と風のいたずら：容易中麻痺或硬化狀態，但中其他狀態幾率低。2X2</strong></p>
+<p><strong>月と木のいたずら：容易中混亂或睡眠狀態，但中其他狀態幾率低。2X2</strong></p>
+<p><strong>光と闇のいたずら：容易中眩暈或黑暗狀態，但中其他狀態幾率低。2X2</strong></p>
+<p><strong>毒むしたちのいたずら：容易中毒狀態，但中其他狀態幾率低。2X2</strong></p>
+<p><strong>弱き守り：走帶刺的地面上像普通行走一樣，但容易狀態異常。1X2</strong></p>
+<p><strong>弱き安定：走流沙、冰凍的地面上像普通行走一樣，但容易狀態異常。2X1</strong></p>
+<p><strong>（全）</strong></p>
+<p><strong>至此，輝石全部出來了，大家就照自己的需要來組合吧。</strong></p>
+<p><strong>至於那個格子，看下面的支線任務，有提升的任務哦\~</strong></p>
+<h2 id="side-quests-full-list">Side Quests: Full List</h2>
+<p><strong>先說明一下：此支線任務非在冒險協會接的任務，而是找不同的NPC，然後在一定條件下，和其「話をする」接的任務。並且同時只能接一個。如果同時接了2個，只能先取消一個，不過任務結束後，可以去找另一個任務接任務的人繼續剛才的任務。</strong></p>
+<h4 id="1-樹の娘のいのり">1. 樹の娘のいのり</h4>
+<p><strong>接任務地點：石碑前</strong></p>
+<p><strong>任務地點：マナの塔</strong></p>
+<p><strong>自從マナの塔被魔物侵入後,ティス已經很久沒能去祈禱了。她拜託玩家去清理一下塔裡的魔物。</strong></p>
+<p><strong>將魔物都清乾淨即完成任務</strong></p>
+<p><strong>獎勵：戒指</strong></p>
+<h4 id="2-価值のある時計">2. 価值のある時計</h4>
+<p><strong>接任務地點：道具店</strong></p>
+<p><strong>任務地點：マナの塔</strong></p>
+<p><strong>和道具店老闆對話，他說丟了他非常貴重的古老時計，想讓玩家去マナの塔找找看。</strong></p>
+<p><strong>過關後找到該道具</strong></p>
+<p><strong>獎勵：300錢</strong></p>
+<h4 id="3-ビッグマネー-">3. ビッグマネー！！</h4>
+<p><strong>接任務地點:道具店</strong></p>
+<p><strong>任務地點：紅砂沙漠</strong></p>
+<p><strong>」価值のある時計「完成後，和道具店老闆對話，他說想讓玩家去紅砂沙漠採集稀少的植物。</strong></p>
+<p><strong>過關後找道該道具</strong></p>
+<p><strong>獎勵：本來是4000，但讓這黑心的老闆扣了一半，變成了2000</strong></p>
+<h4 id="4-失そうの理由">4. 失そうの理由</h4>
+<p><strong>接任務地點：村長屋的ワッツ</strong></p>
+<p><strong>任務地點：星之湖</strong></p>
+<p><strong>矮人族族長ワッツ的手下パンサ最近不知道跑哪裡去了,於是拜託玩家去找一下,在村內打聽消息,從雜貨店裡的老奶奶那裡得知其應該是去了星之湖,馬上前往星之湖。</strong></p>
+<p><strong>找到パンサ後，ワッツ也趕到，發生劇情。</strong></p>
+<p><strong>獎勵：盔甲</strong></p>
+<h4 id="5-言葉をこえた友情">5. 言葉をこえた友情</h4>
+<p><strong>接任務地點：冒險協會</strong></p>
+<p><strong>任務地點：冰之城</strong></p>
+<p><strong>在冒險協會，和一個NPC說話，他說有人出去送貨了，3天還沒回來，所以委託玩家去冰之城找一下他。</strong></p>
+<p><strong>到最底層後找到了一個鏟子，卻找不到人，只能回村，發現人已經回到村了</strong></p>
+<p><strong>獎勵：アナグマ語の辭書、キラキラした石</strong></p>
+<p><strong>後續任務：拿到キラキラした石後，去輝石店，會發生劇情，原來那個石頭是傳說中的幻之精靈石，即純度最高的礦石，可以提升マナフレーム的格數。マナフレーム的格數提升到最高4X4</strong></p>
+<h4 id="6-ボン３兄弟の發明">6. ボン３兄弟の發明</h4>
+<p><strong>接任務地點：輝石店</strong></p>
+<p><strong>任務地點：星之湖</strong></p>
+<p><strong>輝石研究三兄弟最近的研究有了新進展,但是需要化石做進一步研究，委託玩家去星之湖找礦石。</strong></p>
+<p><strong>過關後找到該礦石</strong></p>
+<p><strong>獎勵：ケモノのたましい（輝石）</strong></p>
+<h4 id="7-ティスの行方">7. ティスの行方</h4>
+<p><strong>任務地點：マナの塔</strong></p>
+<h4 id="8-フクザツな事情">8. フクザツな事情</h4>
+<p><strong>接任務地點：遊戲說明處</strong></p>
+<p><strong>任務地點：星之湖</strong></p>
+<p><strong>遊戲說明處和シームーン說話，她說想把珊瑚鋼琴丟到星之湖，拜託玩家去。</strong></p>
+<p><strong>到地底湖後把鋼琴扔進湖裡，卻聽到說再見的聲音。回到村子裡，和シームーン說遇到的事情，シームーン說那也許是風的聲音吧。可在玩家走後，シームーン卻傷感的說出再見，難道另有隱情？</strong></p>
+<p><strong>獎勵：夢魔のコード（物防+128，LV44）</strong></p>
+<h4 id="9-幼子の思い出-人物為ポップ時-">9. 幼子の思い出（人物為ポップ時）</h4>
+<p><strong>接任務地點：村長屋</strong></p>
+<p><strong>任務地點：紅砂沙漠</strong></p>
+<p><strong>將從虛無之地得到的項鏈給村長看，村長會說，這是玩家母親的項鏈，並對玩家講了關於他父母的事。於是玩家決定到沙漠去一趟，也許能碰到父母……</strong></p>
+<p><strong>獎勵：ある幼子への光（輝石）</strong></p>
+<h4 id="10-少年の思い出-人物為フリック時-">10. 少年の思い出（人物為フリック時）</h4>
+<p><strong>接任務地點：村長屋</strong></p>
+<p><strong>任務地點：光之森林</strong></p>
+<p><strong>任務流程同「幼子の思い出」</strong></p>
+<p><strong>獎勵：ある少年への光（輝石）</strong></p>
+<h4 id="11-旅人の思い出-人物為ワンダラー時-">11. 旅人の思い出（人物為ワンダラー時）</h4>
+<p><strong>接任務地點：村長屋</strong></p>
+<p><strong>任務地點：光之森林</strong></p>
+<p><strong>任務流程同「幼子の思い出」</strong></p>
+<p><strong>獎勵：ある旅人への光（輝石）</strong></p>
+<h4 id="12-少女の思い出-人物為タンブル時-">12. 少女の思い出（人物為タンブル時）</h4>
+<p><strong>接任務地點：村長屋</strong></p>
+<p><strong>任務地點：星之湖</strong></p>
+<p><strong>任務流程同「幼子の思い出」</strong></p>
+<p><strong>獎勵：ある少女への光（輝石）</strong></p>
+<h4 id="13-日記の巨龍">13. 日記の巨龍</h4>
+<p><strong>接任務地點：村長家</strong></p>
+<p><strong>任務地點：星之湖</strong></p>
+<p><strong>在村長家床頭櫃山光處附近發現了一把古老的鑰匙.找村長對話得知那是村子右下角房間的鑰匙.那裡面記載著各種各樣的資料,以前玩家還太小,不過現在村長同意他使用那裡的資料了.前往那個房間,發現一本日記,記載了關於星之湖有巨龍出沒的事跡.此時ティス也來了,玩家自告勇前往星之湖</strong></p>
+<p><strong>到最底層卻沒有看到龍，玩家失望的回村了。回到資料室後，ティス卻說確實有龍，還拿出了一個龍之鱗，並把這個龍之鱗送給了玩家。</strong></p>
+<p><strong>獎勵：龍之鱗</strong></p>
+<p><strong>後續任務：拿到龍之鱗後，去礦石店，バルボ說龍之鱗寄宿有龍的力量，於是將龍之鱗改造成了ドラゴンのたましい（輝石）</strong></p>
+<h4 id="14-羽に思いを乘せて">14. 羽に思いを乘せて</h4>
+<p><strong>接任務地點：資料室</strong></p>
+<p><strong>任務地點：紅砂沙漠</strong></p>
+<p><strong>「日記の巨龍」完成後，玩家在資料室裡見到ティス，對話後得知她想去紅砂沙漠裡找コカトリスの羽,於是和其一起前往紅砂沙漠。</strong></p>
+<p><strong>在沙漠深處找到了コカトリスの羽，回村後，ティス將コカトリスの羽做成了兩個護身符，一個給玩家，一個自己戴。</strong></p>
+<p><strong>獎勵：旅人の守り</strong></p>
+<h4 id="15-千年をねむり續ける石">15. 千年をねむり續ける石</h4>
+<p><strong>接任務地點：資料室</strong></p>
+<p><strong>任務地點：</strong></p>
+<p><strong>「羽に思いを乘せて」完成後，玩家在資料室見到ティス，對話後得知冰之城有一塊不可思議的石頭，於是想讓玩家去找找。</strong></p>
+<p><strong>在底層看到了一個寶箱，打開後，發現了不可思議的石頭，看上去好像是輝石。帶回村子給ティス看，她說這是以前祈禱儀式用的。看樣子玩家能運用這個石頭，於是就把這個石頭交給玩家了。</strong></p>
+<p><strong>獎勵：千年石（輝石）</strong></p>
+<h4 id="16-にじの花畑">16. にじの花畑</h4>
+<p><strong>接任務地點：資料室</strong></p>
+<p><strong>任務地點：紅砂沙漠</strong></p>
+<p><strong>「千年をねむり續ける石」完成後，玩家在資料室見到ティス，對話後得到「冒險者日記2」，在書中發現紅砂沙漠中有彩色的花田，於是玩家決定去一探究竟。</strong></p>
+<p><strong>找遍了整個沙漠也沒有找到花田，正當玩家失望準備離去時，忽然發現地上有一個種子，揀起來後回村。和ティス對話，得到「冒險者日記3」，通過日記得知，花田已經被燒光了，真是可惜。</strong></p>
+<p><strong>後續任務：找村長對話，給村長看那個種子，村長說是沙漠之花，也許能使彩色的花田重新開放。</strong></p>
+<p><strong>獎勵：鏈條</strong></p>
+<h3 id="beast-god-quests">Beast-god quests</h3>
+<h4 id="17-生まれ落ちた火の神獸">17. 生まれ落ちた火の神獸</h4>
+<p><strong>接任務地點：村長家</strong></p>
+<p><strong>任務地點：紅砂沙漠</strong></p>
+<p><strong>在身上付的精靈是火精靈時，與村長家的火精靈對話，它會讓你去紅砂沙漠找火之神獸。</strong></p>
+<p><strong>見到火之神獸後，可以選擇一個問題問它，本人選的是第一個「關於マナ王」，火之神獸給玩家解釋後，得到火神獸之石</strong></p>
+<p><strong>獎勵：ぐれん-火神獸之石</strong></p>
+<h4 id="18-生まれ落ちた風の神獸">18. 生まれ落ちた風の神獸</h4>
+<p><strong>接任務地點：雜貨店</strong></p>
+<p><strong>任務地點：マナの塔</strong></p>
+<p><strong>在身上付的精靈是風精靈時，與道具店左邊平台上的風精靈對話，它會讓你去找風之神獸。</strong></p>
+<p><strong>見到風之神獸後，可以選擇一個問題問它，本人選的是第一個「時空的扭曲」，風之神獸給玩家解釋後，得到風神獸之石</strong></p>
+<p><strong>獎勵：しっぷう-風神獸之石</strong></p>
+<h4 id="19-生まれ落ちた光の神獸">19. 生まれ落ちた光の神獸</h4>
+<p><strong>接任務地點：村子中</strong></p>
+<p><strong>任務地點：虛無之地</strong></p>
+<p><strong>在身上付的精靈是光精靈時，與村子上方的光精靈對話，它會讓你去虛無之地找光之神獸。</strong></p>
+<p><strong>見到光之神獸後，可以選擇一個問題問它，本人選的是第一個「影子是怎麼回事」，光之神獸給玩家解釋後，得到光神獸之石</strong></p>
+<p><strong>獎勵：らいこう-光神獸之石</strong></p>
+<h4 id="20-生まれ落ちた木の神獸">20. 生まれ落ちた木の神獸</h4>
+<p><strong>接任務地點：村子中</strong></p>
+<p><strong>任務地點：光之森林</strong></p>
+<p><strong>在身上付的精靈是木精靈時，與村長家門口的木精靈對話，它會讓你去找木之神獸。</strong></p>
+<p><strong>見到木之神獸後，可以選擇一個問題問它，本人選的是第一個「關於マナ的女神」，木之神獸給玩家解釋後，得到木神獸之石</strong></p>
+<p><strong>獎勵：たいじゅ-木神獸之石</strong></p>
+<h4 id="21-生まれ落ちた闇の神獸">21. 生まれ落ちた闇の神獸</h4>
+<p><strong>接任務地點：村子中</strong></p>
+<p><strong>任務地點：生命之道</strong></p>
+<p><strong>在身上付的精靈是闇精靈時，與石碑旁邊的闇精靈對話，它會讓你去找闇之神獸。</strong></p>
+<p><strong>見到闇之神獸後，可以選擇一個問題問它，本人選的是第一個「關於輝石」，闇之神獸給玩家解釋後，得到闇神獸之石</strong></p>
+<p><strong>獎勵：とこやみ-闇神獸之石</strong></p>
+<h4 id="22-生まれ落ちた月の神獸">22. 生まれ落ちた月の神獸</h4>
+<p><strong>接任務地點：村長家</strong></p>
+<p><strong>任務地點：マナの塔</strong></p>
+<p><strong>在身上付的精靈是月精靈時，與村長家的月精靈對話，它會讓你去找月之神獸。</strong></p>
+<p><strong>見到月之神獸後，可以選擇一個問題問它，本人選的是第一個「マナ的嬰兒」，月之神獸給玩家解釋後，得到月神獸之石</strong></p>
+<p><strong>獎勵：えいげつ-月神獸之石</strong></p>
+<h4 id="23-生まれ落ちた水の神獸">23. 生まれ落ちた水の神獸</h4>
+<p><strong>接任務地點：村子中</strong></p>
+<p><strong>任務地點：星之湖</strong></p>
+<p><strong>在身上付的精靈是水精靈時，與石碑下方的水精靈對話，它會讓你去星之湖找水之神獸。</strong></p>
+<p><strong>見到水之神獸後，可以選擇一個問題問它，本人選的是第一個「マナ暴走的阻止方法」，水之神獸給玩家解釋後，得到水神獸之石</strong></p>
+<p><strong>獎勵：ばくりゅう-水神獸之石</strong></p>
+<h4 id="24-生まれ落ちた土の神獸">24. 生まれ落ちた土の神獸</h4>
+<p><strong>接任務地點：村子中</strong></p>
+<p><strong>任務地點：冰之城</strong></p>
+<p><strong>在身上付的精靈是土精靈時，與村中正中的土精靈對話，它會讓你去冰之城找土之神獸。</strong></p>
+<p><strong>見到土之神獸後，可以選擇一個問題問它，本人選的是第一個「關於聖劍」，土之神獸給玩家解釋後，得到土神獸之石</strong></p>
+<p><strong>獎勵：こんごう-土神獸之石</strong></p>
+<p><strong>PS：一共是有9個問題，開始做神獸任務時都有3個選項，在做最後一個神獸任務時，只有2個。本人有一個「10年前的暴亂」沒有選。</strong></p>
+<h4 id="25-試練の先に">25. 試練の先に</h4>
+<p><strong>接任務地點：石碑</strong></p>
+<p><strong>任務地點：異界</strong></p>
+<p><strong>集齊8個神獸之石後，來道石碑前，發現石碑在發光，調查石碑就能進入扭曲的時空。</strong></p>
+<p><strong>通過層層難關，終於來到了異界的最底層，神獸們也驚訝玩家能夠來到於此。對話後，得到一個輝石。</strong></p>
+<p><strong>獎勵：神秘のしゅくふく（輝石）</strong></p></main></div></body>
+</html>
