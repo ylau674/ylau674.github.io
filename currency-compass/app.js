@@ -40,6 +40,7 @@ const fallbackRates = { USD: 1, EUR: 0.856, GBP: 0.749, JPY: 157.2, AUD: 1.52, C
 const settingsKey = "currency-compass-settings";
 let base = "USD";
 let selected = ["EUR", "GBP", "JPY", "AUD"];
+let autoRefresh = false;
 let rates = { ...fallbackRates };
 
 const baseSelect = document.querySelector("#base-currency");
@@ -51,6 +52,8 @@ const amountCode = document.querySelector("#amount-code");
 const updatedLabel = document.querySelector("#updated-label");
 const statusLabel = document.querySelector("#status-label");
 const searchInput = document.querySelector("#currency-search-input");
+const autoRefreshButton = document.querySelector("#auto-refresh");
+let refreshTimer;
 
 function restoreSettings() {
   try {
@@ -61,6 +64,7 @@ function restoreSettings() {
       selected = saved.selected.filter(code => currencies[code] && code !== base);
     }
     if (typeof saved.amount === "string" && Number(saved.amount) >= 0) amountInput.value = saved.amount;
+    if (typeof saved.autoRefresh === "boolean") autoRefresh = saved.autoRefresh;
   } catch {
     // Ignore unavailable or malformed browser storage and keep defaults.
   }
@@ -68,7 +72,7 @@ function restoreSettings() {
 
 function saveSettings() {
   try {
-    localStorage.setItem(settingsKey, JSON.stringify({ base, selected, amount: amountInput.value }));
+    localStorage.setItem(settingsKey, JSON.stringify({ base, selected, amount: amountInput.value, autoRefresh }));
   } catch {
     // The converter remains usable when browser storage is unavailable.
   }
@@ -113,6 +117,15 @@ function render() {
   amountCode.textContent = base;
   renderRates();
   renderOptions();
+  saveSettings();
+}
+
+function setAutoRefresh(enabled) {
+  autoRefresh = enabled;
+  autoRefreshButton.setAttribute("aria-pressed", String(autoRefresh));
+  autoRefreshButton.classList.toggle("is-active", autoRefresh);
+  clearInterval(refreshTimer);
+  if (autoRefresh) refreshTimer = setInterval(fetchRates, 10000);
   saveSettings();
 }
 
@@ -161,6 +174,7 @@ optionList.addEventListener("click", event => {
   render();
 });
 searchInput.addEventListener("input", renderOptions);
+autoRefreshButton.addEventListener("click", () => setAutoRefresh(!autoRefresh));
 rateList.addEventListener("click", event => {
   const button = event.target.closest("button[data-remove]");
   if (button) {
@@ -179,4 +193,5 @@ rateList.addEventListener("click", event => {
 restoreSettings();
 renderBaseOptions();
 render();
+setAutoRefresh(autoRefresh);
 fetchRates();
