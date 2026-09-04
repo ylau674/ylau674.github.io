@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3f0ea">
+  <title>Currency Compass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">↗</div>
+      <div>
+        <p class="eyebrow">Exchange desk</p>
+        <h1>Currency Compass</h1>
+      </div>
+      <div class="live-status"><span class="status-dot"></span><span id="status-label">Live rates</span></div>
+    </header>
+
+    <section class="hero-panel" aria-labelledby="converter-heading">
+      <div class="hero-copy">
+        <p class="eyebrow">Your home currency</p>
+        <h2 id="converter-heading">See your money<br><em>in every direction.</em></h2>
+      </div>
+      <div class="amount-wrap">
+        <label for="amount">Amount to convert</label>
+        <div class="amount-input-row">
+          <span id="amount-symbol" class="input-symbol">$</span>
+          <input id="amount" type="number" inputmode="decimal" min="0" step="any" value="1" aria-label="Amount in default currency">
+          <span id="amount-code" class="input-code">USD</span>
+        </div>
+      </div>
+      <div class="base-picker">
+        <label for="base-currency">Convert from</label>
+        <select id="base-currency" aria-label="Default currency"></select>
+      </div>
+      <p class="updated" id="updated-label">Fetching current rates...</p>
+    </section>
+
+    <section class="rates-section" aria-labelledby="rates-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">At a glance</p>
+          <h2 id="rates-heading">Your watchlist</h2>
+        </div>
+        <span id="currency-count" class="count-label">0 currencies</span>
+      </div>
+      <div id="rate-list" class="rate-list" aria-live="polite"></div>
+    </section>
+
+    <section class="add-section" aria-labelledby="add-heading">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="eyebrow">Curate your view</p>
+          <h2 id="add-heading">Add a currency</h2>
+        </div>
+      </div>
+      <div class="currency-search">
+        <label class="visually-hidden" for="currency-search-input">Search currencies</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="currency-search-input" type="search" autocomplete="off" placeholder="Search by currency or code" aria-controls="currency-options">
+      </div>
+      <div id="currency-options" class="currency-options" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <span>Rates by ExchangeRate-API + CoinGecko</span>
+      <span>Drag cards to reorder</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
