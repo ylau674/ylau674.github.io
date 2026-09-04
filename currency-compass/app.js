@@ -183,7 +183,7 @@ amountInput.addEventListener("input", () => {
 optionList.addEventListener("click", event => {
   const button = event.target.closest("button[data-code]");
   if (!button || button.disabled) return;
-  selected.push(button.dataset.code);
+  selected.unshift(button.dataset.code);
   render();
 });
 searchInput.addEventListener("input", renderOptions);
