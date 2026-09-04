@@ -1,9 +1,13 @@
 # Currency Compass
 
-A mobile-first currency converter with a configurable home currency, searchable watchlist, country flags, real-time amount conversion, drag-and-drop ordering, and reference rates.
+A simple, mobile-first currency converter with a configurable home currency, a watchlist, country flags, real-time amount conversion, and reference rates.
 
 The catalog includes 34 major fiat and regional currencies plus Bitcoin. Fiat quotes come from ExchangeRate-API and Bitcoin quotes come from CoinGecko when online.
 
-Watchlist order, selected currencies, default currency, and the current amount are saved in the browser with `localStorage`.
+Watchlist order, selected currencies, default currency, and the current amount are saved in the browser with `localStorage`, so they persist across refreshes on the same device and browser.
 
-Open `index.html` directly in a browser or visit the GitHub Pages deployment at `https://ylau674.github.io/currency-compass/`.
+The app includes a tab favicon and Apple touch icon for iPhone home-screen shortcuts.
+
+## Run
+
+Open `index.html` directly in a browser. The page uses the Frankfurter API for current exchange rates and falls back to indicative bundled rates when offline.
