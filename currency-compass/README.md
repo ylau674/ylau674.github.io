@@ -6,7 +6,7 @@ The catalog includes 34 major fiat and regional currencies plus Bitcoin. Fiat qu
 
 Watchlist order, selected currencies, default currency, and the current amount are saved in the browser with `localStorage`, so they persist across refreshes on the same device and browser.
 
-The app includes PNG and SVG tab favicons plus a 180x180 PNG Apple touch icon for iPhone home-screen shortcuts.
+The app uses the supplied `ryougae_dollar_yen.png` artwork for its 32x32 tab favicon and 180x180 Apple touch icon for iPhone home-screen shortcuts.
 
 ## Run
 
