@@ -149,20 +149,26 @@ async function fetchRates() {
   statusLabel.textContent = "Updating...";
   try {
     const quoteBase = base === "BTC" ? "USD" : base;
-    const [exchangeResponse, bitcoinResponse] = await Promise.all([
+    const [exchangeResult, bitcoinResult] = await Promise.allSettled([
       fetch(`https://open.er-api.com/v6/latest/${quoteBase}`),
       fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
     ]);
-    if (!exchangeResponse.ok || !bitcoinResponse.ok) throw new Error("Rate request failed");
-    const exchangeData = await exchangeResponse.json();
-    const bitcoinData = await bitcoinResponse.json();
-    if (exchangeData.result !== "success" || !bitcoinData.bitcoin?.usd) throw new Error("Rate data unavailable");
-    const bitcoinUsd = bitcoinData.bitcoin.usd;
-    rates = base === "BTC"
-      ? { BTC: 1, ...Object.fromEntries(Object.entries(exchangeData.rates).map(([code, rate]) => [code, rate * bitcoinUsd])) }
-      : { [base]: 1, ...exchangeData.rates, BTC: exchangeData.rates.USD / bitcoinUsd };
-    statusLabel.textContent = "Live rates";
-    updatedLabel.textContent = `Updated ${formatUpdatedAt(new Date())} · 1 ${base} reference rate`;
+    if (exchangeResult.status !== "fulfilled" || !exchangeResult.value.ok) throw new Error("Fiat rate request failed");
+    const exchangeData = await exchangeResult.value.json();
+    if (exchangeData.result !== "success") throw new Error("Fiat rate data unavailable");
+    const bitcoinResponse = bitcoinResult.status === "fulfilled" ? bitcoinResult.value : null;
+    const bitcoinData = bitcoinResponse?.ok ? await bitcoinResponse.json() : null;
+    const bitcoinUsd = bitcoinData?.bitcoin?.usd;
+    if (base === "BTC") {
+      if (!bitcoinUsd) throw new Error("Bitcoin rate unavailable");
+      rates = { BTC: 1, ...Object.fromEntries(Object.entries(exchangeData.rates).map(([code, rate]) => [code, rate * bitcoinUsd])) };
+    } else {
+      rates = { [base]: 1, ...exchangeData.rates, BTC: bitcoinUsd ? exchangeData.rates.USD / bitcoinUsd : fallbackRates.BTC / (fallbackRates[base] || 1) };
+    }
+    statusLabel.textContent = bitcoinUsd || base === "BTC" ? "Live rates" : "Live fiat rates";
+    updatedLabel.textContent = bitcoinUsd || base === "BTC"
+      ? `Updated ${formatUpdatedAt(new Date())} · 1 ${base} reference rate`
+      : `Updated ${formatUpdatedAt(new Date())} · BTC using fallback rate`;
   } catch {
     const baseUsdRate = fallbackRates[base] || 1;
     rates = Object.fromEntries(Object.keys(currencies).map(code => [code, (fallbackRates[code] || 1) / baseUsdRate]));
