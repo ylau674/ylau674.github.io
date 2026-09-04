@@ -157,8 +157,9 @@ async function fetchRates() {
 }
 
 baseSelect.addEventListener("change", () => {
+  const previousBase = base;
   base = baseSelect.value;
-  selected = selected.filter(code => code !== base);
+  selected = [previousBase, ...selected.filter(code => code !== base && code !== previousBase)];
   renderBaseOptions();
   render();
   fetchRates();
