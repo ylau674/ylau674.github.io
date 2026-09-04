@@ -15,6 +15,8 @@ Personal GitHub Pages site for Andy Lau's game guides and browser tools.
 - `guides/f-zero-gx.html`
 - `currency-compass/` - mobile-first currency converter and watchlist
 
+Currency Compass includes a searchable catalog of 34 fiat currencies plus Bitcoin, configurable default currency and amount, persistent browser settings, and touch-friendly arrow controls for watchlist ordering.
+
 ## Published pages
 
 - <https://ylau674.github.io/> - homepage and table of contents
@@ -28,6 +30,8 @@ Personal GitHub Pages site for Andy Lau's game guides and browser tools.
 - <https://ylau674.github.io/guides/f-zero-gx.html>
 - <https://ylau674.github.io/currency-compass/> - Currency Compass converter
 - <https://ylau674.github.io/padi-scuba-dive-log/> - separate project repository
+
+Currency Compass uses ExchangeRate-API for fiat quotes and CoinGecko for Bitcoin quotes when live network access is available. It falls back to bundled indicative rates when a request fails.
 
 The existing PADI Scuba Dive Log remains in its own repository and is linked from the home page:
 
