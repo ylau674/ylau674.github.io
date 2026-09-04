@@ -141,7 +141,10 @@ function setAutoRefresh(enabled) {
   autoRefreshButton.title = autoRefresh ? "Disable automatic rate refresh" : "Refresh rates every 10 seconds";
   autoRefreshButton.classList.toggle("is-active", autoRefresh);
   clearInterval(refreshTimer);
-  if (autoRefresh) refreshTimer = setInterval(fetchRates, 10000);
+  if (autoRefresh) {
+    fetchRates();
+    refreshTimer = setInterval(fetchRates, 10000);
+  }
   saveSettings();
 }
 
@@ -224,4 +227,4 @@ restoreSettings();
 renderBaseOptions();
 render();
 setAutoRefresh(autoRefresh);
-fetchRates();
+if (!autoRefresh) fetchRates();
