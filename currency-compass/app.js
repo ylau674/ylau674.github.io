@@ -135,6 +135,9 @@ function render() {
 function setAutoRefresh(enabled) {
   autoRefresh = enabled;
   autoRefreshButton.setAttribute("aria-pressed", String(autoRefresh));
+  autoRefreshButton.textContent = autoRefresh ? "10s ON" : "10s OFF";
+  autoRefreshButton.setAttribute("aria-label", autoRefresh ? "Disable automatic rate refresh" : "Enable automatic rate refresh");
+  autoRefreshButton.title = autoRefresh ? "Disable automatic rate refresh" : "Refresh rates every 10 seconds";
   autoRefreshButton.classList.toggle("is-active", autoRefresh);
   clearInterval(refreshTimer);
   if (autoRefresh) refreshTimer = setInterval(fetchRates, 10000);
