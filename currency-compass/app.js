@@ -184,6 +184,7 @@ optionList.addEventListener("click", event => {
   const button = event.target.closest("button[data-code]");
   if (!button || button.disabled) return;
   selected.unshift(button.dataset.code);
+  searchInput.value = "";
   render();
 });
 searchInput.addEventListener("input", renderOptions);
