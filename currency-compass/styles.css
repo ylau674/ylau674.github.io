@@ -22,10 +22,9 @@ button, select { cursor: pointer; }
 .eyebrow { margin: 0; color: var(--muted); font: 500 10px/1.2 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
 h1, h2, p { margin-top: 0; }
 h1 { margin-bottom: 0; font-size: 16px; line-height: 1; letter-spacing: -.03em; }
-.header-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
-.live-status { display: flex; align-items: center; gap: 6px; color: var(--muted); font: 400 10px var(--mono); }
 .status-dot { width: 7px; height: 7px; background: var(--mint-deep); border-radius: 50%; box-shadow: 0 0 0 4px #dbeade; }
-.refresh-toggle { min-width: 66px; min-height: 44px; padding: 7px 8px; color: var(--muted); border: 1px solid var(--line); border-radius: 5px; background: transparent; font: 500 10px var(--mono); touch-action: manipulation; }
+.refresh-toggle { display: flex; align-items: center; gap: 6px; min-width: 155px; min-height: 44px; margin-left: auto; padding: 7px 10px; color: var(--muted); border: 1px solid var(--line); border-radius: 5px; background: transparent; font: 500 10px var(--mono); touch-action: manipulation; }
+.refresh-divider { color: var(--line); }
 .refresh-toggle:hover, .refresh-toggle:focus-visible, .refresh-toggle.is-active { color: var(--ink); border-color: var(--mint-deep); background: var(--mint); }
 .hero-panel { position: relative; overflow: hidden; padding: 26px 22px 20px; color: var(--white); background: var(--ink); border-radius: 12px; box-shadow: 0 12px 30px rgba(24, 37, 34, .12); }
 .hero-panel::after { content: ""; position: absolute; right: -34px; top: -52px; width: 170px; height: 170px; border: 1px solid rgba(184,224,201,.26); border-radius: 50%; box-shadow: 0 0 0 22px rgba(184,224,201,.05), 0 0 0 44px rgba(184,224,201,.04); }

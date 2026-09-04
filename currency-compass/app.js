@@ -51,6 +51,7 @@ const amountSymbol = document.querySelector("#amount-symbol");
 const amountCode = document.querySelector("#amount-code");
 const updatedLabel = document.querySelector("#updated-label");
 const statusLabel = document.querySelector("#status-label");
+const refreshLabel = document.querySelector("#refresh-label");
 const searchInput = document.querySelector("#currency-search-input");
 const autoRefreshButton = document.querySelector("#auto-refresh");
 let refreshTimer;
@@ -135,7 +136,7 @@ function render() {
 function setAutoRefresh(enabled) {
   autoRefresh = enabled;
   autoRefreshButton.setAttribute("aria-pressed", String(autoRefresh));
-  autoRefreshButton.textContent = autoRefresh ? "10s ON" : "10s OFF";
+  refreshLabel.textContent = autoRefresh ? "10s ON" : "10s OFF";
   autoRefreshButton.setAttribute("aria-label", autoRefresh ? "Disable automatic rate refresh" : "Enable automatic rate refresh");
   autoRefreshButton.title = autoRefresh ? "Disable automatic rate refresh" : "Refresh rates every 10 seconds";
   autoRefreshButton.classList.toggle("is-active", autoRefresh);
