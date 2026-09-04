@@ -102,6 +102,18 @@ function formatNumber(value, digits = 2) {
   return new Intl.NumberFormat(undefined, { maximumFractionDigits: digits, minimumFractionDigits: digits }).format(value);
 }
 
+function formatUpdatedAt(date) {
+  return new Intl.DateTimeFormat(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short"
+  }).format(date);
+}
+
 function renderRates() {
   const amount = Math.max(0, Number(amountInput.value) || 0);
   document.querySelector("#currency-count").textContent = `${selected.length} ${selected.length === 1 ? "currency" : "currencies"}`;
@@ -146,12 +158,12 @@ async function fetchRates() {
       ? { BTC: 1, ...Object.fromEntries(Object.entries(exchangeData.rates).map(([code, rate]) => [code, rate * bitcoinUsd])) }
       : { [base]: 1, ...exchangeData.rates, BTC: exchangeData.rates.USD / bitcoinUsd };
     statusLabel.textContent = "Live rates";
-    updatedLabel.textContent = `Updated just now · 1 ${base} reference rate`;
+    updatedLabel.textContent = `Updated ${formatUpdatedAt(new Date())} · 1 ${base} reference rate`;
   } catch {
     const baseUsdRate = fallbackRates[base] || 1;
     rates = Object.fromEntries(Object.keys(currencies).map(code => [code, (fallbackRates[code] || 1) / baseUsdRate]));
     statusLabel.textContent = "Offline rates";
-    updatedLabel.textContent = "Showing indicative rates · check connection to update";
+    updatedLabel.textContent = `Showing indicative rates · update attempted ${formatUpdatedAt(new Date())}`;
   }
   renderRates();
 }
