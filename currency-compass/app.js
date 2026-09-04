@@ -170,8 +170,14 @@ async function fetchRates() {
 
 baseSelect.addEventListener("change", () => {
   const previousBase = base;
-  base = baseSelect.value;
-  selected = [previousBase, ...selected.filter(code => code !== base && code !== previousBase)];
+  const nextBase = baseSelect.value;
+  const nextBaseIndex = selected.indexOf(nextBase);
+  base = nextBase;
+  if (nextBaseIndex >= 0) {
+    selected[nextBaseIndex] = previousBase;
+  } else {
+    selected = [previousBase, ...selected.filter(code => code !== previousBase)];
+  }
   renderBaseOptions();
   render();
   fetchRates();
