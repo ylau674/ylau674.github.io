@@ -14,6 +14,7 @@ Personal GitHub Pages site for Andy Lau's game guides and browser tools.
 - `guides/mecha-mg.html`
 - `guides/f-zero-gx.html`
 - Currency Compass - separate repository at <https://github.com/ylau674/currency-compass>
+- CISSP Process Ordering Exercise - separate repository at <https://github.com/ylau674/cissp-exercises>
 
 ## Published pages
 
@@ -28,6 +29,7 @@ Personal GitHub Pages site for Andy Lau's game guides and browser tools.
 - <https://ylau674.github.io/guides/f-zero-gx.html>
 - <https://ylau674.github.io/currency-compass/> - Currency Compass converter (separate repository)
 - <https://ylau674.github.io/padi-scuba-dive-log/> - separate project repository
+- <https://ylau674.github.io/cissp-exercises/> - CISSP process ordering exercise (separate repository)
 
 The existing PADI Scuba Dive Log remains in its own repository and is linked from the home page:
 
